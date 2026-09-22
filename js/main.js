@@ -22,16 +22,19 @@ const CATEGORY_LABELS = {
 };
 
 const listEl = document.querySelector("#skills-list");
+const searchEl = document.querySelector("#skills-search");
 const filtersEl = document.querySelector("#skills-filters");
 
 let activeCategory = "all";
 
 function renderSkills() {
+  const query = searchEl.value.trim().toLowerCase();
   listEl.innerHTML = "";
 
   for (const skill of SKILLS) {
     const matchesCategory = activeCategory === "all" || skill.category === activeCategory;
-    if (!matchesCategory) {
+    const matchesQuery = skill.name.toLowerCase().includes(query);
+    if (!matchesCategory || !matchesQuery) {
       continue;
     }
 
@@ -61,5 +64,7 @@ filtersEl.addEventListener("click", (event) => {
   }
   renderSkills();
 });
+
+searchEl.addEventListener("input", renderSkills);
 
 renderSkills();
