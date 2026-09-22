@@ -22,6 +22,7 @@ const CATEGORY_LABELS = {
 };
 
 const listEl = document.querySelector("#skills-list");
+const filtersEl = document.querySelector("#skills-filters");
 
 let activeCategory = "all";
 
@@ -48,5 +49,17 @@ function renderSkills() {
     listEl.append(item);
   }
 }
+
+filtersEl.addEventListener("click", (event) => {
+  const button = event.target.closest("button");
+  if (!button) {
+    return;
+  }
+  activeCategory = button.dataset.category;
+  for (const b of filtersEl.querySelectorAll("button")) {
+    b.classList.toggle("is-active", b === button);
+  }
+  renderSkills();
+});
 
 renderSkills();
