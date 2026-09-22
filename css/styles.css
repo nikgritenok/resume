@@ -29,6 +29,9 @@ a:hover {
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
   max-width: 880px;
   margin: 0 auto;
   padding: 32px 16px 8px;
@@ -69,6 +72,8 @@ main {
   max-width: 880px;
   margin: 0 auto;
   padding: 16px;
+  display: grid;
+  gap: 16px;
 }
 
 .card {
@@ -106,6 +111,31 @@ main {
 
 .entry p {
   margin: 0;
+}
+
+.skills-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.skills-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.skills-list__tag {
+  font-size: 12px;
+  color: var(--color-muted);
+  white-space: nowrap;
 }
 
 .footer {
