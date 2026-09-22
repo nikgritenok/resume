@@ -22,6 +22,7 @@ const CATEGORY_LABELS = {
 };
 
 const listEl = document.querySelector("#skills-list");
+const emptyEl = document.querySelector("#skills-empty");
 const searchEl = document.querySelector("#skills-search");
 const filtersEl = document.querySelector("#skills-filters");
 
@@ -30,6 +31,7 @@ let activeCategory = "all";
 function renderSkills() {
   const query = searchEl.value.trim().toLowerCase();
   listEl.innerHTML = "";
+  let visibleCount = 0;
 
   for (const skill of SKILLS) {
     const matchesCategory = activeCategory === "all" || skill.category === activeCategory;
@@ -50,7 +52,10 @@ function renderSkills() {
 
     item.append(name, tag);
     listEl.append(item);
+    visibleCount += 1;
   }
+
+  emptyEl.hidden = visibleCount > 0;
 }
 
 filtersEl.addEventListener("click", (event) => {

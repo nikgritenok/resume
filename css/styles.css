@@ -184,6 +184,11 @@ main {
   white-space: nowrap;
 }
 
+.skills-empty {
+  margin: 12px 0 0;
+  color: var(--color-muted);
+}
+
 .footer {
   max-width: 880px;
   margin: 0 auto;
