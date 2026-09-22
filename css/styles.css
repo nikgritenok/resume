@@ -226,6 +226,20 @@ main {
 }
 
 @media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 24px;
+  }
+
+  .header__contacts {
+    justify-content: center;
+  }
+
+  .theme-toggle {
+    align-self: center;
+  }
+
   .header__photo {
     width: 120px;
     height: 150px;
