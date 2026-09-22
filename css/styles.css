@@ -7,6 +7,15 @@
   --color-border: #e5e3dc;
 }
 
+:root[data-theme="dark"] {
+  --color-bg: #14161c;
+  --color-card: #1d2027;
+  --color-text: #e8eaf0;
+  --color-muted: #9aa1ad;
+  --color-accentt: #8ab4ff;
+  --color-border: #2b2f38;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -66,6 +75,21 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 4px 20px;
+}
+
+.theme-toggle {
+  align-self: flex-start;
+  padding: 8px 14px;
+  font: inherit;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-card);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-accent);
 }
 
 main {

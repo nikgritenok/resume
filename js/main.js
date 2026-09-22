@@ -73,3 +73,17 @@ filtersEl.addEventListener("click", (event) => {
 searchEl.addEventListener("input", renderSkills);
 
 renderSkills();
+
+const themeToggle = document.querySelector("#theme-toggle");
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  themeToggle.textContent = theme === "dark" ? "Светлая тема" : "Тёмная тема";
+}
+
+themeToggle.addEventListener("click", () => {
+  const current = document.documentElement.dataset.theme;
+  applyTheme(current === "dark" ? "light" : "dark");
+});
+
+applyTheme(document.documentElement.dataset.theme || "light");
