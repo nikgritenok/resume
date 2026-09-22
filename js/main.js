@@ -78,6 +78,7 @@ const themeToggle = document.querySelector("#theme-toggle");
 
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
+  localStorage.setItem("theme", theme);
   themeToggle.textContent = theme === "dark" ? "Светлая тема" : "Тёмная тема";
 }
 
