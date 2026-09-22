@@ -232,6 +232,10 @@ main {
     padding-top: 24px;
   }
 
+  .header__info h1 {
+    font-size: 26px;
+  }
+
   .header__contacts {
     justify-content: center;
   }
