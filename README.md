@@ -1,20 +1,18 @@
-# Интерактивное резюме
+# Interactive resume
 
-Одностраничный сайт-резюме: разметка и стили написаны вручную, вся интерактивность — на чистом JavaScript, без фреймворков и библиотек.
+A one-page resume with the markup and styles written by hand and all the interactivity in plain JavaScript. No frameworks, no libraries, no build step.
 
-**Посмотреть:** https://nikgritenok.github.io/resume/
+**Live:** https://nikgritenok.github.io/resume/
 
-## Что умеет страница
+## What the page does
 
-- адаптивная вёрстка, проверена на ширинах 1440, 768 и 375;
-- раздел «Навыки» с фильтром по категориям и поиском, работают одновременно;
-- сообщение «Ничего не найдено», если под фильтр ничего не подошло;
-- светлая и тёмная тема, выбор запоминается и переживает перезагрузку страницы.
+- Layout checked at 1440, 768 and 375 pixels wide.
+- Skills section with a category filter and a search field that work together.
+- Empty state if nothing matches the filter.
+- Light and dark theme, remembered after a reload.
 
-## По заданию
+## Notes
 
-Выполнены все основные требования: структура на смысловых тегах, Flexbox и Grid в раскладке, фильтрация, поиск, пустое состояние, темы с сохранением, публикация на GitHub Pages, README.
+Semantic tags for structure, Flexbox and Grid for layout, filtering and search in vanilla JS, theme choice in localStorage, published on GitHub Pages. The design is mine, without a template or a reference.
 
-Невыполненного нет. Из необязательного ничего не добавлял — сосредоточился на основной части.
-
-Дизайн сделал сам, без готовых шаблонов и конкретного референса.
+The resume text itself is in Russian, since that is the language of the people reading it.
